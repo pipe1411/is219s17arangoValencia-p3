@@ -37,7 +37,7 @@
         <div class="col-md-6" ng-repeat="movie in movies">
             <div class="thumbnail">
 
-					<img class="poster" ng-src="{{movie.posters[posterindex]}}"/>
+					<img class="poster" ng-src="{{movie.posters[movie.posterindex]}}"/>
 					<div class="imageInfo">{{movie.posterindex}}</div>
 					
 					<p class="title">{{movie.title}} ({{movie.country}})</p>
@@ -47,7 +47,7 @@
 					<p class="websites">Websites: <a ng-href="{{movie.imdb}}">IMDB</a> | <a ng-href="{{movie.website}}">Official</a></p>
 					
 		            <div class="social">
-		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movie.likes}}</p>
+		              <p class="likes" ng-click="like($index)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movie.likes}}</p>
 		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movie.dislikes}}</p>
 		            </div>
             </div> 
