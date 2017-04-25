@@ -16,21 +16,21 @@
 	<!-- DO NOT CHANGE ANYTHING ABOVE THIS LINE-->
 
 	<!-- Angular (ADD HERE) -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 	
 </head>
 
-  <body ng-app="app">
-	  
+  <body ng-app="IS219Gallery" ng-controller="HomeController">
+
     <div class="header">
-	    
+
       <div class="container">
-        <h1 id="app_title">%title%</h1>
+        <h1 id="app_title">{{ title }}</h1>
       </div>
-      
+
     </div>
 
-    <div class="main" ng-controller="HomeController">
+    <div class="main">
       
       <div class="container">
 
@@ -58,8 +58,8 @@
 
     <div class="footer">
       <div class="container">
-		<a id="github" class="btn btn-lg btn-warning">
-			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> %owner% %github%
+		<a id="github" class="btn btn-lg btn-warning" href="{{ github }}">
+			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{ owner }}
   		</a>
       </div>
     </div>
