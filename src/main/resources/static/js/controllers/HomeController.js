@@ -129,6 +129,14 @@ app.controller('HomeController', ['$scope', function($scope) {
         minutes = (decimal - hours)*60;
         return hours+"h" + " " + minutes+"m";
 	}
+
+	$scope.currentImageCount = function(index) {
+	    return $scope.movies[index].posterindex+1;
+    }
+
+    $scope.totalImages = function(index) {
+	    return $scope.movies[index].posters.length;
+    }
 		
 	
 	
