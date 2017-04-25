@@ -110,6 +110,10 @@ app.controller('HomeController', ['$scope', function($scope) {
 	$scope.like = function(index) {
         $scope.movies[index].likes++;
     };
+
+	$scope.dislike = function(index) {
+	    $scope.movies[index].dislikes--;
+    }
 		
 	
 	
