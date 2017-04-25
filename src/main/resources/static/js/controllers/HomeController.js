@@ -122,6 +122,13 @@ app.controller('HomeController', ['$scope', function($scope) {
 	        $scope.movies[index].posterindex+=1;
         }
     }
+    
+    $scope.timeText = function (minutes) {
+        var decimal = minutes/60;
+        var hours = Math.floor(decimal);
+        minutes = (decimal - hours)*60;
+        return hours+"h" + " " + minutes+"m";
+	}
 		
 	
 	
