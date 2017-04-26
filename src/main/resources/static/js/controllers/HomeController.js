@@ -112,7 +112,7 @@ app.controller('HomeController', ['$scope', function($scope) {
             runtime:	114,
             released:	new Date('1985', '07', '06'),
             country:	'USA',
-            posters:	['img/thegoonies_1.jpg','img/thegoonies_2.jpg','img/thegoonies_3.jpg'],
+            posters:	['img/thegoonies_1.jpg','img/thegoonies_3.jpg'],
             imdb:		"http://www.imdb.com/title/tt0089218/",
             website:	'https://www.facebook.com/thegooniesmovie/',
             likes:	1985,
