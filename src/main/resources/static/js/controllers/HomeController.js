@@ -88,8 +88,52 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
-	
+	},
+        {
+
+            title:	'Man On Fire',
+            iscore:	7.7,
+            rating:	'R',
+            runtime:	146,
+            released:	new Date('2004', '23', '04'),
+            country:	'USA',
+            posters:	['img/manonfire_1.jpg','img/manonfire_2.jpg'],
+            imdb:		'http://www.imdb.com/title/tt0328107',
+            website:	'https://www.facebook.com/manonfiremovie/',
+            likes:	2004,
+            dislikes:	23,
+            posterindex: 0
+        },
+
+        {
+            title:	'The Goonies',
+            iscore:	7.8,
+            rating:	'PG',
+            runtime:	114,
+            released:	new Date('1985', '07', '06'),
+            country:	'USA',
+            posters:	['img/thegoonies_1.jpg','img/thegoonies_2.jpg','img/thegoonies_3.jpg'],
+            imdb:		"http://www.imdb.com/title/tt0089218/",
+            website:	'https://www.facebook.com/thegooniesmovie/',
+            likes:	1985,
+            dislikes:	7,
+            posterindex: 0
+        },
+
+        {
+            title:	'Saw',
+            iscore:	7.7,
+            rating:	'R',
+            runtime:	103,
+            released:	new Date('2004', '10', '29'),
+            country:	'USA',
+            posters:	['img/saw_1.jpg','img/saw_2.jpg'],
+            imdb:		'http://www.imdb.com/title/tt0387564/',
+            website:	'http://lionsgateathome.com/saw',
+            likes:	2004,
+            dislikes:	19,
+            posterindex: 0
+        },
 	
   ];
 	
@@ -97,8 +141,9 @@ app.controller('HomeController', ['$scope', function($scope) {
 
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
-	
-	
+	$scope.title = 'IMDB + Andres\'s Top 8 Movies';
+	$scope.owner = "Andres";
+	$scope.github = "https://github.com/pipe1411/is219s17arangoValencia-p3.git";
 	
 	
 	
@@ -106,6 +151,36 @@ app.controller('HomeController', ['$scope', function($scope) {
 	
 	
 	/* ADD FUNCTIONS FOR STEP 7 HERE */
+	$scope.like = function(index) {
+        $scope.movies[index].likes+=1;
+    };
+
+	$scope.dislike = function(index) {
+	    $scope.movies[index].dislikes-=1;
+    }
+
+    $scope.posterClick = function(index) {
+	    if($scope.movies[index].posterindex == ($scope.movies[index].posters.length-1)) {
+            $scope.movies[index].posterindex = 0;
+        } else {
+	        $scope.movies[index].posterindex+=1;
+        }
+    }
+    
+    $scope.timeText = function (minutes) {
+        var decimal = minutes/60;
+        var hours = Math.floor(decimal);
+        minutes = (decimal - hours)*60;
+        return hours+"h" + " " + minutes+"m";
+	}
+
+	$scope.currentImageCount = function(index) {
+	    return $scope.movies[index].posterindex+1;
+    }
+
+    $scope.totalImages = function(index) {
+	    return $scope.movies[index].posters.length;
+    }
 		
 	
 	
