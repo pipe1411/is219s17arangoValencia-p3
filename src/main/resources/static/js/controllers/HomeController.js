@@ -168,10 +168,9 @@ app.controller('HomeController', ['$scope', function($scope) {
     }
     
     $scope.timeText = function (minutes) {
-        var decimal = minutes/60;
-        var hours = Math.floor(decimal);
-        minutes = (decimal - hours)*60;
-        return hours+"h" + " " + minutes+"m";
+	    var runtime = new Date();
+	    runtime.setMinutes(minutes);
+	    return runtime.getHours() + "h" + " " + runtime.getMinutes()+"m";
 	}
 
 	$scope.currentImageCount = function(index) {
