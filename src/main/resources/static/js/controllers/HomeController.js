@@ -88,8 +88,52 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
-	
+	},
+        {
+
+            title:	'Man On Fire',
+            iscore:	7.7,
+            rating:	'R',
+            runtime:	146,
+            released:	new Date('2004', '04', '23'),
+            country:	'USA',
+            posters:	['img/manonfire_1.jpg','img/manonfire_2.jpg'],
+            imdb:		'http://www.imdb.com/title/tt0328107',
+            website:	'https://www.facebook.com/manonfiremovie/',
+            likes:	2004,
+            dislikes:	23,
+            posterindex: 0
+        },
+
+        {
+            title:	'Schindler\'s List',
+            iscore:	8.9,
+            rating:	'R',
+            runtime:	195,
+            released:	new Date('1993', '11', '30'),
+            country:	'USA',
+            posters:	['img/manonfire_2.jpg'],
+            imdb:		'http://www.imdb.com/title/tt0108052',
+            website:	'https://www.uphe.com/schindlers-list',
+            likes:	812,
+            dislikes:	101,
+            posterindex: 0
+        },
+
+        {
+            title:	'Schindler\'s List',
+            iscore:	8.9,
+            rating:	'R',
+            runtime:	195,
+            released:	new Date('1993', '11', '30'),
+            country:	'USA',
+            posters:	['img/schindlerslist.jpg'],
+            imdb:		'http://www.imdb.com/title/tt0108052',
+            website:	'https://www.uphe.com/schindlers-list',
+            likes:	812,
+            dislikes:	101,
+            posterindex: 0
+        },
 	
   ];
 	
