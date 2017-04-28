@@ -121,17 +121,17 @@ app.controller('HomeController', ['$scope', function($scope) {
         },
 
         {
-            title:	'Saw',
-            iscore:	7.7,
-            rating:	'R',
-            runtime:	103,
-            released:	new Date('2004', '10', '29'),
+            title:	'Little Boy',
+            iscore:	7.4,
+            rating:	'PG-13',
+            runtime:	106,
+            released:	new Date('2015', '4', '24'),
             country:	'USA',
-            posters:	['img/saw_1.jpg','img/saw_2.jpg'],
-            imdb:		'http://www.imdb.com/title/tt0387564/',
-            website:	'http://lionsgateathome.com/saw',
-            likes:	2004,
-            dislikes:	19,
+            posters:	['img/little_boy1.jpg','img/little_boy2.jpg'],
+            imdb:		'http://www.imdb.com/title/tt1810683/',
+            website:	'http://littleboyresources.com/',
+            likes:	2015,
+            dislikes:	24,
             posterindex: 0
         },
 	
@@ -168,9 +168,9 @@ app.controller('HomeController', ['$scope', function($scope) {
     }
     
     $scope.timeText = function (minutes) {
-	    var runtime = new Date();
-	    runtime.setMinutes(minutes);
-	    return runtime.getHours() + "h" + " " + runtime.getMinutes()+"m";
+	    var hours = Math.floor(minutes/60);
+	    var minutes = minutes%60;
+	    return hours + "h" + " " + minutes+"m";
 	}
 
 	$scope.currentImageCount = function(index) {
