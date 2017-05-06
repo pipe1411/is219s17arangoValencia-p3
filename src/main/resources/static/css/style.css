@@ -108,6 +108,18 @@ body {
     transition: background 500ms;
 }
 
+/* This makes sure your Github Button is centered */
+.footer {
+    text-align: center;
+    margin: 80px 0 110px;
+}
+
+/* This makes sure your Github Button text is small */
+#github{
+	font-size: small;
+}
+
+/* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
 .likes {
     background-color: #008700;
     color: #ffffff;
@@ -129,20 +141,6 @@ body {
     color: #F65A5B;
     transition: background 500ms;
 }
-
-/* This makes sure your Github Button is centered */
-.footer {
-    text-align: center;
-    margin: 80px 0 110px;
-}
-
-/* This makes sure your Github Button text is small */
-#github{
-	font-size: small;
-}
-
-/* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
-
 
 
 
